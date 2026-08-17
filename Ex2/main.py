@@ -21,10 +21,7 @@ if __name__ == "__main__":
     threads = []
 
     for filial in filiais:
-        thread = threading.Thread(
-            target=processar_filial,
-            args=(filial,)
-        )
+        thread = threading.Thread(target = processar_filial, args=(filial,))
 
         threads.append(thread)
         thread.start()
