@@ -1,0 +1,37 @@
+Relógios físicos e lógicos;
+ - Relógios físicos representam o tempo real em cada computador.
+ - Relógios podem ter diferenças entre eles (comp A 08:02:03, enquanto comp B é 08:02:05)
+ - Relógios lógicos servem para sincronizar e organizar a ordem dos eventos
+ - Não representam necessáriamente horario real
+ - Relógio de Lamport
+
+Exclusão Mútua;
+ - Garante que apenas um processo acesse um recurso compartilhado por vez
+ - Evita conflitos e inconsistencias de dados
+ - O trecho que acessa o recurso compartilhado é seção crítica
+
+Eleição;
+  - Serve para escolher um processo coordenador no sistema
+  - Pode ser realizada quando o coordenador atual falha
+  - Os processos participam da escolha de um novo coordenador por meio de seu identificador que pode ser usado para determinar quem será escolhido
+  - Após a escolha, o novo coordenador informa os outros processos
+  Bully;
+    -O processo que detecta a falha e inicia a eleição
+    - Processos com identificador tem maior prioridade
+    - O maior processo ativo se torna o novo coordenador
+    
+  Eleição  em anel;
+    - Os processos são organizados logicamente em um anel.
+    - A mensagem de eleição passa por todos os processos
+    - O processo com maior identificador é escolhido como coordenador
+    
+Pool de threads;
+  - É um conjunto de threads disponiveis para executar tarefas.
+  - As threads são criadas e reutilizadas
+  - Evita criar uma nova thread para cada tarefa
+  - As tarefas geralmente ficam em fila
+  - Uma thread livre pega uma tarefa e executa
+  - Depois de terminar, a thread volta a ficar disponível
+  - Reduz o custo de criação de threads
+  - Ajuda a controlar o uso de recursos do sistema
+  - Pode melhorar o desempenho quando tem muitas tarefas
